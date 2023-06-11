@@ -1,0 +1,1254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fafafa;
+    color: rgb(68, 68, 68);
+ 
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    
+}
+
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+button {
+    border-radius: 0 !important;
+}
+
+ul {
+    padding: 0 !important;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    position: fixed;
+    margin-left: -250px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    background: rgb(255, 255, 255);
+    color: black;
+    transition: all 0.3s;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.075);
+}
+#sidebar.active {
+    margin-left: 0;
+}
+
+#sidebar .sidebar-header img { 
+    display: block;
+    margin: 40% auto 30%;
+    width: 75%;
+}
+#sidebar ul li a {
+    font-size: 0.8em;
+    font-weight: lighter;
+    letter-spacing: 2.4px;
+    padding: 20px 12%;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: rgb(199, 199, 199);
+    background: #fff;
+}
+
+#sidebar ul li.active {
+    color: #5C5B59;
+    font-weight: 800;
+}
+
+#sidebar .sidefooter {
+    margin-top: 30%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+}
+
+#sidebar .sidefooter img {
+    width: 30px;
+    margin: 10px 5px;
+}
+
+@media (max-height: 700px) {
+    #sidebar .sidebar-header img {
+    margin: 20% auto 20%;
+    }
+    #sidebar ul li a {
+    padding: 15px 12%;
+    }
+    #sidebar .sidefooter {
+    margin-top: 0%;
+    }
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: calc(100% - 250px);
+}
+
+#content .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#content .page p {
+/*     text-align: justify !important;
+text-align-last: center !important; */
+    font-size: 0.95em;
+    padding: 30px 0;
+}
+
+.text-justify {
+    text-align-last: center !important;
+}
+
+
+/* .container {
+    padding-right: 90px;
+    padding-left: 90px;
+} */
+
+#sidebarCollapse {
+    margin: 30px;
+    z-index: 999; 
+    position: absolute;
+    
+}
+
+#content h2 {
+    font-family: 'Crimson Text', serif !important;
+    color: #DD052B;
+    margin: 50px 0px 40px;
+}
+
+.mobile-on {
+    display: none;
+}
+@media(max-width: 768px) {
+    .mobile-on {
+        display: block;
+    }
+}
+@media(min-width: 768px) {
+    #sidebar.inicio {
+        margin-left: 0px;
+    }
+    #content.inicio {
+        width: calc(100% - 250px);
+    }
+}
+/* ---------------------------------------------------
+    FOOTER STYLE
+----------------------------------------------------- */
+
+.mb-footer {
+}
+
+footer {
+    width: 100%;
+    background-color: #5C5B59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+} 
+
+footer p {
+    font-size: 0.7em!important;
+    letter-spacing: 0.15em;
+    color: white;
+    margin: 0;
+} 
+
+@media(max-width: 768px) {
+    footer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    footer p {
+        text-align: center;
+        padding: 0px!important;
+    }
+}
+
+
+/* ---------------------------------------------------
+    INÍCIO
+----------------------------------------------------- */
+
+.portfolio {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-columns: 45% 1fr 1fr;
+    grid-gap: 1px;
+    background-size: cover;
+    background-position: top left;
+  /*   transition: all ease-in-out 300ms; */
+    position: relative;
+    z-index: 10;
+}
+
+
+.portfolio-box {
+    display: grid;
+    transition: all 0.4s ease;
+    /*cursor: pointer;*/
+}
+
+.portfolio-item {
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.portfolio-item .box-title {
+    letter-spacing: 0.1rem;
+    font-size: 1em !important;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 5px black;
+    
+}
+
+.portfolio-box .box-logo {
+    height: auto;
+    display: none;
+    transition: all 2s ease;
+    opacity: 0;
+    transition-delay: 2s;
+}
+
+.portfolio-box .portfolio-item {
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: grayscale(20%);
+    background-blend-mode: multiply;
+    
+}
+.portfolio-box {
+    transition: all 1s ease;
+}
+
+.portfolio-box:hover .portfolio-item {
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
+    filter: grayscale(100%);
+}
+
+.portfolio-box:hover .portfolio-item .box-title {
+    display: none;
+}
+
+.portfolio-box:hover .portfolio-item .box-logo {
+    display: block;
+    opacity: 1;
+}
+
+.portfolio div:nth-child(1) {
+    grid-row: span 3;
+}
+
+.portfolio div:nth-child(3) {
+    grid-row: span 2;
+}
+
+.portfolio div:nth-child(2) {
+    grid-column: span 2;
+}
+
+
+/* .grid-row-3{
+    grid-row: span 3;
+}
+
+.grid-row-2{
+    grid-row: span 2;
+}
+
+.grid-column-2{
+    grid-column: span 2;
+} */
+
+@media(max-width: 768px) {
+        .portfolio {
+        background-color: white;
+        background-blend-mode: multiply;
+        width: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1px;
+        }
+        .portfolio div:nth-child(1) {
+        grid-row: span 2;
+        grid-column: span 2;
+        }
+        
+        .portfolio div:nth-child(3) {
+        grid-row: span 1;
+        }
+        
+        .portfolio div:nth-child(2) {
+        grid-column: span 1;
+        }
+        
+        .portfolio-item {
+            background-color: rgba(0, 0, 0, 0.65);
+            background-blend-mode: multiply;
+        }
+        
+        .portfolio-item .box-title {
+            display: none;
+        }
+        
+        .portfolio-item .box-logo {
+            display: block;
+            opacity: 1;
+        }
+}
+
+.attos {
+    background-image: url("/img/home_attos.jpg");
+    background-position: 51%;
+}
+.condor {
+    background-image: url("/img/condor_img.jpg");
+}
+.conceito {
+    background-image: url("/img/home_conceito.jpg");
+}
+.america {
+    background-image: url("/img/home_america.jpg");
+    /*background-position: left 0px bottom -60px; 
+    background-size: 586px;*/
+}
+
+@media (min-width: 1440px) {
+    .america {
+        /*background-position: left 0px bottom -65px;
+        background-size: 600px;*/
+    }
+}
+
+@media (min-width: 1441px){
+    .america {
+        /*background-position: left 0px bottom -65px;
+        background-size: 821px;*/
+    }
+}
+
+@media (min-width: 1921px){
+    .america {
+        /*background-position: left 0px bottom -65px;
+        background-size: 1500px;*/
+    }
+}
+
+
+
+.quality {
+    background-image: url("/img/home_quality.jpg");
+}
+
+/* ---------------------------------------------------
+    CUSTOM PAGE
+----------------------------------------------------- */
+
+
+.top {
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Crimson Text', serif !important;
+}
+.top h1 {
+    font-size: 100px;
+}
+.top img {
+    margin: auto;
+}
+
+/* ---------------------------------------------------
+    QUEM SOMOS
+----------------------------------------------------- */
+
+.quemsomos-top {
+    background-image: url(/img/quemsomos_top.jpg);
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.logo-empresas img{
+    padding: 10px 30px 30px;
+}
+   
+.logo-attos img {
+    width: 280px;
+    padding: 50px 30px;
+}
+.logo-e {
+    margin-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    .logo-e {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+.content-title {
+    position: relative;
+    top: -72px;
+}
+
+h3.title {
+    /*position: relative;
+    top: -5px;
+    margin-bottom: 50px;*/
+}
+
+h3.title span {
+    padding: 10px 20px;
+    background-color: #DD052B; 
+    color: white;
+    font-size: 14;
+    letter-spacing: 2;
+    font-weight: 800;
+}
+
+.condor-logo{
+    width: 130px;
+}
+
+@media(max-width: 768px) {
+    .condor-logo{
+        width: 158px;
+    }
+}
+
+
+
+/* ---------------------------------------------------
+    EMPREENDIMENTOS
+----------------------------------------------------- */
+
+.empreendimentos-img {
+    background-blend-mode: normal;
+    background-image: url(/img/empreendimentos_top.jpg);
+    background-size: cover;
+    background-position: 0 -100px;
+}
+
+@media(max-width: 1280px) {
+    .empreendimentos-img {
+        background-position: center;
+    }
+}
+
+.title-empreendimentos h1 {
+    font-family: 'Crimson Text', serif !important;
+    color: #5C5B59;
+    font-size: 3.5em;
+    font-weight: 200;
+    margin-top: 60px;
+}
+
+.title-empreendimentos .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    color: #5C5B59 !important;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.lancamento {
+    width: 130px;
+    background: #DD052B;
+    font-weight: 800;
+    letter-spacing: 1;
+    padding: 3px 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.disponiveis {
+    width: 188px;
+    background: black;
+    font-weight: 800;
+    letter-spacing: 1;
+    padding: 3px 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+
+.unidades {
+    justify-content: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+.unidades li {
+    margin: 15px;
+    padding: 20px;
+    background-color: #414141;
+    width: 320px;
+    height: 450px;
+    text-align: start;
+    text-align-last: start !important;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+
+}
+
+.unidades li:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2c2c2c90;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.unidades li:hover:before, .unidades li:focus:before, .unidades li:active:before {
+    box-shadow: 4px 4px;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+ .unidades li img {
+  max-width: 70%; 
+  padding: 20px;
+  transition: .5s ease;
+  transition-delay: .02s;
+  opacity: 0;
+ }
+ .unidades li:hover img {
+     transition-delay: 0s;
+     opacity: 1;
+     
+ }
+
+
+
+.unidades li h1 {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.unidades-info {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+.unidades-info .info {
+    display: none;
+    margin-right: 15px;
+} 
+
+.unidade-heading h1{
+    margin: 0;
+
+}
+.unidade-heading p {
+    padding: 0px !important;
+    color: white;
+}
+
+/*----------UNIDADES------------
+
+.unidades li:nth-child(1) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/elleven.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(2) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/premium.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(3) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/prime.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(4) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/liberty.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(5) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/parque.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(6) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/infinite.jpg);
+    background-size: cover;
+}
+
+.unidades li:nth-child(7) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/lucio.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(8) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/bellagio.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(9) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/colegio.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(10) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/unique.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(11) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/one.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(12) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/julio.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(13) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/saint.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(14) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/next.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(15) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/premier.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(16) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/soffisticato.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(17) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/imperio.jpg);
+    background-size: cover;
+}
+.unidades li:nth-child(18) {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/algarve.jpg);
+    background-size: cover;
+}
+
+/* ---------------------------------------------------
+    EMPREENDIMENTOS PAGE
+----------------------------------------------------- */
+
+
+/*----------UNIDADES------------
+
+.unidades li.bg-viva {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/viva.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-elleven {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/elleven.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-premium {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/premium.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-prime {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/prime.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-liberty {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/liberty.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-parquenorte {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/parque.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-infinite {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/infinite.jpg);
+    background-size: cover;
+}
+
+.unidades li.bg-luciocosta {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/lucio.jpg);
+    background-size: cover;
+}
+.unidades li.bg-bellagio {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/bellagio.jpg);
+    background-size: cover;
+}
+.unidades li.bg-colegio {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/colegio.jpg);
+    background-size: cover;
+}
+.unidades li.bg-unique {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/unique.jpg);
+    background-size: cover;
+}
+.unidades li.bg-one {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/one.jpg);
+    background-size: cover;
+}
+.unidades li.bg-julioadnet {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/julio.jpg);
+    background-size: cover;
+}
+.unidades li.bg-saintmartin {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/saint.jpg);
+    background-size: cover;
+}
+.unidades li.bg-next {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/next.jpg);
+    background-size: cover;
+}
+.unidades li.bg-premier {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/premier.jpg);
+    background-size: cover;
+}
+.unidades li.bg-soffisticato {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/soffisticato.jpg);
+    background-size: cover;
+}
+.unidades li.bg-imperio {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/imperio.jpg);
+    background-size: cover;
+}
+.unidades li.bg-algarve {
+    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/unidades/algarve.jpg);
+    background-size: cover;
+}
+
+/* ---------------------------------------------------
+    EMPREENDIMENTOS PAGE
+----------------------------------------------------- */
+
+/*----------UNIDADES------------*/
+
+.unidades li {
+    background-size: cover;
+}
+
+/* ---------------------------------------------------
+    EMPREENDIMENTOS PAGE
+----------------------------------------------------- */
+
+.gallery {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
+.img-container {
+    overflow: hidden;
+}
+.img-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.img-container img:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    background: black;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.title-emp {
+    font-family: 'Crimson Text', serif !important;
+    color: #5C5B59;
+}
+
+
+.dados li{
+    width: 49%;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    text-align: start;
+    margin-top: 10px;
+    padding: 20px;
+    list-style: none;
+    background-color: #ECECEC;
+}
+@media(max-width: 768px) {
+    .dados li {
+    width: 100%;
+    }
+}
+
+
+.dados a {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #DD052B;  
+    color: white !important;
+}
+.dados a:hover {
+    box-shadow: 2p */x 2px 10px rgba(0, 0, 0, 0.158);
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.vendas{
+    width: 100%;
+    height: 300px;
+    text-align: start;
+}
+
+.scroll {
+    margin-top: 69px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+.scroll::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+/* ---------------------------------------------------
+    SOCIAL E AMBIENTAL
+----------------------------------------------------- */
+
+.title-social {
+    margin-top: 80px;
+    font-family: 'Crimson Text', serif !important;
+    color: #5C5B59;
+}
+
+.social-img {
+    background-image: url(/img/social_top.jpg);
+}
+
+.contato-social {
+    width: 100%;
+}
+
+.contato-social li {
+    height: 380px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    list-style: none;
+    background-color: rgb(233, 233, 233);
+    padding: 20px 30px;
+}
+
+/* ---------------------------------------------------
+    CONTATO
+----------------------------------------------------- */
+
+.align-start {
+    text-align: start !important;
+}
+.align-end {
+    text-align: end !important;
+}
+
+.contato input {
+    border-radius: 0 !important;
+}
+
+.contato-img {
+    background-image: url(/img/contato_top.jpg);
+}
+
+.contato-info {
+    margin: 50px;
+    text-align: start !important;
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(68, 68, 68);
+    
+}
+
+.contato-info li{
+    padding-bottom: 25px !important;
+} 
+
+.contato-info li:hover {
+    color: #dc3545 !important;
+} 
+
+
+
+.contato-info img {
+    margin-right: 10px;
+    padding: 0px 5px 20px 0px;
+    max-width: 35px;
+    /*padding: 20px;
+    max-width: 35px;
+    padding-bottom: 30px;*/
+}
+.contato-info h1 {
+    margin-bottom: 1px;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+
+::placeholder {
+    font-size: 0.8em;
+    opacity: 0.5 !important;
+}
+
+@media(max-width: 768px) {
+    .contato-info h1 {
+    font-size: 1.1em;
+    }
+}
+
+
+/* ---------------------------------------------------
+    EMPRESAS
+----------------------------------------------------- */
+
+.emp-contato {
+    text-align-last: none !important;
+}
+.emp-contato img {
+    height: 150px;
+}
+.logo-empresas {
+    width:20%;
+}
+.logos {
+    width: 400px;
+}
+.attos-top {
+    background-image: url(/img/attos_top.jpg);
+}
+
+.condor-top {
+    background-image: url(/img/condor_top.jpg);
+}
+
+.conceito-top {
+    background-image: url(/img/conceito_top.jpg);
+}
+.quality-top {
+    background-image: url(/img/quality_top.jpg);
+}
+.america-top {
+    background-image: url(/img/america_top.jpg);
+}
+
+
+.logo-e2 {
+    margin-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+} 
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+
+@media (max-width: 768px) {
+    /*#sidebar {
+        margin-left: -0px;
+    }
+     #sidebar.active {
+        margin-left: -250px;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: -250px;
+    }*/
+    /*#sidebar.inicio {
+        margin-left: -250px;
+    }
+    #content.inicio {
+        width: 100%;
+    }*/
+    #sidebarCollapse span {
+        display: none;
+    }
+    h3 span {
+        display: none;
+    }
+    .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    }
+    .logo-empresas {
+    width:60% !important;
+    }
+    .title-empreendimentos h1 {
+
+    font-size: 2.5em;
+
+    }
+    .top h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .contato-social {
+        flex-direction: column;
+    }
+}
+
+.text-justify {
+    text-align-last: left !important;
+}
+.container-cookie {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+    max-width: 1334px;
+    min-height: 70px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    border: solid 1px #eeeeee;
+    background-color: #fff;
+    z-index: 999999999!important;
+}
+
+.container-cookie p{
+    color: #000!important;
+    font-size: 12px!important;
+    margin: 0!important;
+    line-height: normal!important;
+    font-weight: 100!important;
+}
+
+.container-cookie .btn {
+    font-family: "MuseoSans_500", sans-serif;
+    color: #ffffff;
+    width: 100%;
+    /* padding: 9px 5px!important; */
+    padding: 8px 3px!important;
+    margin-bottom: 15px;
+    font-size: 16px!important;
+    text-align: center;
+    letter-spacing: 0px;
+    text-transform: normal;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: inherit;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.5s ease;
+}
+
+.modal.modal-termos {
+    background: transparent;
+    opacity: 1;
+    z-index: 9999999999!important;
+}
+
+.modal.modal-termos ul {
+    padding-left: 30px!important;
+}
+
+.modal.modal-termos, .modal.modal-termos p {
+    font-size: 16px;
+}
+
+.modal.modal-termos h2 {
+    font-size: 24px;
+}
+
+.modal.modal-termos h3 {
+    font-size: 20px;
+}
+
+@media (max-width: 991px) {
+    .container-cookie p{
+        margin-bottom: 15px!important;
+    }
+}
