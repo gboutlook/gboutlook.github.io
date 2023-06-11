@@ -360,7 +360,7 @@ footer p {
     background-position: 51%;
 }
 .condor {
-    background-image: url("/img2/condor_img.jpg"); 
+    background-image: url("/img/condor_img.jpg"); 
 }
 .conceito {
     background-image: url("/img/home_conceito.jpg"); 
@@ -429,7 +429,7 @@ footer p {
 ----------------------------------------------------- */
 
 .quemsomos-top {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/quemsomos_top.jpg);
+    background-image: url(/img/quemsomos_top.jpg);
 }
 
 .justify-content {
@@ -495,7 +495,7 @@ h3.title span {
 
 .empreendimentos-img {
     background-blend-mode: normal;
-    background-image: url(https://comdono.s3-us-west-2.amazonaws.com/modules/comdono/lp/grupo_attos/images/top/empreendimentos_top.jpg);
+    background-image: url(/img/empreendimentos_top.jpg);
     background-size: cover;
     background-position: 0 -100px;
 }
@@ -998,7 +998,7 @@ h3.title span {
 }
 
 .social-img {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/social_top.jpg) ;
+    background-image: url(img/social_top.jpg) ;
 }
 
 .contato-social {
@@ -1033,7 +1033,7 @@ h3.title span {
 }
 
 .contato-img {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/contato_top.jpg) ;
+    background-image: url(/img/contato_top.jpg) ;
 }
 
 .contato-info {
@@ -1099,21 +1099,21 @@ h3.title span {
     width: 400px;
 }
 .attos-top {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/attos_top.jpg);
+    background-image: url(/img/attos_top.jpg);
 }
 
 .condor-top {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/condor_top.jpg);
+    background-image: url(/img/condor_top.jpg);
 }
 
 .conceito-top {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/conceito_top.jpg);
+    background-image: url(/img/conceito_top.jpg);
 }
 .quality-top {
-    background-image: url(https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/quality_top.jpg);
+    background-image: url(/img/quality_top.jpg);
 }
 .america-top {
-    background-image: url("https://media.comdono.com/modules/comdono/lp/grupo_attos/images/top/america_top.jpg");
+    background-image: url(/img/america_top.jpg);
 }
 
 
