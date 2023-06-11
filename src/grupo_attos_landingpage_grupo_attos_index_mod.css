@@ -356,17 +356,17 @@ footer p {
 }
 
 .attos {
-    background-image: url("img/home_attos.jpg");
+    background-image: url("/img/home_attos.jpg");
     background-position: 51%;
 }
 .condor {
-    background-image: url("https://media.comdono.com/modules/comdono/lp/grupo_attos/images/content/condor_img.jpg"); 
+    background-image: url("/img2/condor_img.jpg"); 
 }
 .conceito {
-    background-image: url("https://media.comdono.com/modules/comdono/lp/grupo_attos/images/home/home_conceito.jpg"); 
+    background-image: url("/img/home_conceito.jpg"); 
 }
 .america {
-    background-image: url("https://comdono.s3-us-west-2.amazonaws.com/modules/comdono/lp/grupo_attos/images/home/home_america.jpg");
+    background-image: url("/img/home_america.jpg");
     /*background-position: left 0px bottom -60px; 
     background-size: 586px;*/
 }
@@ -395,7 +395,7 @@ footer p {
 
 
 .quality {
-    background-image: url("https://media.comdono.com/modules/comdono/lp/grupo_attos/images/home/home_quality.jpg"); 
+    background-image: url("/img/home_quality.jpg"); 
 }
 
 /* ---------------------------------------------------
